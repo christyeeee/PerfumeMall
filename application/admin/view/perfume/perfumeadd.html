@@ -3,11 +3,13 @@
 <center>
 <br><br>
 
- <FORM action="{:url('flower/addFlower')}" method="post" enctype="multipart/form-data">
+ <FORM action="{:url('perfume/addPerfume')}" method="post" enctype="multipart/form-data">
    <table style="width:550px;border-width:2px;border-style:dotted;">
    <tr>
+   <a href="{:url('perfume/index')}">返回</a>
    <td colspan=2 style="background:url('image/ico_60.jpg'); text-align:center; width:650px;">
-   <font size=4>添加鲜花</font>&nbsp;&nbsp;<a href="{:url('flower/index')}">返回</a></td>   
+   <font size=4>添加香水</font>&nbsp;&nbsp;
+   </td>   
    </tr>
    <tr>
    <td style="text-align:right"><font size=2>编号：</font></td>   
@@ -18,68 +20,70 @@
    <td><input type=text name="pname" SIZE=18></td>  
    </tr>
    <tr>
-   <td style="text-align:right"><font size=2>类别：</font></td>   
+   <td style="text-align:right"><font size=2>性别：</font></td>   
    <td><Select name="myclass" >
-                     <Option value="鲜花">鲜花
-                     <Option value="蛋糕">蛋糕
-                     <Option value="礼篮">礼篮
-                     <Option value="果篮">果篮
-                     <Option value="公仔">公仔
+                     <Option value="男香">男香
+                     <Option value="女香">女香
+                     <Option value="中性香">中性香
+                     <Option value="非性别化香">非性别化香
                    </Select> 
    </td>  
    </tr> 
    <tr>
-   <td style="text-align:right"><font size=2>用途：</font></td>   
+   <td style="text-align:right"><font size=2>香调：</font></td>   
    <td><Select name="pclass" >
-                     <Option value="爱情鲜花">爱情鲜花
-                     <Option value="友情鲜花">友情鲜花
-                     <Option value="生日鲜花">生日鲜花
-                     <Option value="问候长辈">问候 长辈
-                     <Option value="回报老师">回报老师
-                     <Option value="祝福庆贺">祝福庆贺
-                     <Option value="婚庆鲜花">婚庆鲜花
-                     <Option value="探病慰问">探病慰问
-                     <Option value="生子祝贺">生子祝贺
-                     <Option value="道歉鲜花">道歉鲜花
-                     <Option value="家居鲜花">家居鲜花
-                     <Option value="丧葬哀思">丧葬哀思
-                     <Option value="开业乔迁">开业乔迁
-                     <Option value="商务礼仪">商务礼仪
+                     <Option value="花香调">花香调
+                     <Option value="木质香调">木质香调
+                     <Option value="东方香调">东方香调
+                     <Option value="美食调">美食调
+                     <Option value="果香调">果香调
+                     <Option value="馥奇香调">馥奇香调
                    </Select> 
    </td>  
    </tr>
     <tr>
-   <td style="text-align:right"><font size=2>主材料：</font></td>   
+   <td style="text-align:right"><font size=2>品牌</font></td>   
    <td><Select name="pclass1" >
-                     <Option value="玫瑰">玫瑰
-                     <Option value="康乃馨">康乃馨
-                     <Option value="郁金香">郁金香
-                     <Option value="百合">百合
-                     <Option value="扶郎">扶郎
-                     <Option value="马蹄莲">马蹄莲
-                     <Option value="向日葵">向日葵
-                     <Option value="蓝色妖姬">蓝色妖姬
+                     <Option value="香奈儿>香奈儿
+                     <Option value="宝格丽">宝格丽
+                     <Option value="范思哲">范思哲
+                     <Option value="迪奥">迪奥
+                     <Option value="华伦天奴">华伦天奴
+                     <Option value="古驰">古驰
+                     <Option value="爱马仕">爱马仕
+                     <Option value="芬迪">芬迪
+                     <Option value="路易威登">路易威登
+                     <Option value="雅诗兰黛">雅诗兰黛
+                     <Option value="祖玛珑">祖玛珑
+                     <Option value="王薇薇">王薇薇
+                     <Option value="蔻驰">蔻驰
+                     <Option value="YSL">YSL
+                     <Option value="穆勒">穆勒
+                     <Option value="洛丽塔">洛丽塔
+                     <Option value="唐娜·凯伦">唐娜·凯伦
+                     <Option value="博柏利">博柏利
+                     <Option value="阿蒂仙之香">阿蒂仙之香
                    </Select> 
    </td>  
    </tr>
    <tr>
-   <td style="text-align:right"><font size=2>材料：</font></td>   
+   <td style="text-align:right"><font size=2>前调：</font></td>   
    <td><TextArea name="qiandiao" Rows="2" Cols="40"></TextArea></td>  
    </tr>
    <tr>
-   <td style="text-align:right"><font size=2>包装：</font></td>   
+   <td style="text-align:right"><font size=2>中调：</font></td>   
    <td><TextArea name="zhongdiao" Rows="2" Cols="40"></TextArea></td>  
    </tr>
    <tr>
-   <td style="text-align:right"><font size=2>花语：</font></td>   
+   <td style="text-align:right"><font size=2>后调：</font></td>   
    <td><TextArea name="houdiao" Rows="3" Cols="40" ></TextArea></td>  
    </tr>
    <tr>
-   <td style="text-align:right"><font size=2>说明：</font></td>   
+   <td style="text-align:right"><font size=2>简介：</font></td>   
    <td><input type=text name="shuoming" SIZE=40></td>  
    </tr>
    <tr>
-   <td style="text-align:right"><font size=2>市场价：</font></td>   
+   <td style="text-align:right"><font size=2>原价：</font></td>   
    <td><input type=text name="price" SIZE=18></td>  
    </tr>
    <tr>
