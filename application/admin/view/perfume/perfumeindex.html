@@ -2,7 +2,7 @@
 <center>
 {include  file="./public/common/admintop.html"/}
 <meta charset="utf-8">
-<a href="{:url('perfume/perfumeadd')}">添加香水</a>
+<a href="{:url('perfume/perfumeadd')}" style="color:Black;text-decoration:none;">添加香水</a>
 <table width="999px" border="0" cellpadding="0"
 			cellspacing="1" style="background:#d8d8d8;color:#333333">
 			<tr><th width="100px" height="30" align="center" valign="middle">香水编号</th>
@@ -26,8 +26,8 @@
 				<td valign="middle" bgcolor="#FFFFFF">{$perfume.yourprice }元</td>
 				<td valign="middle" bgcolor="#FFFFFF">{$perfume.SelledNum }件</td>
 				<td valign="middle"  align="center"  bgcolor="#FFFFFF">
-				<a href="{:url('perfume/perfumeupdate')}?perfumeID={$perfume.perfumeID}">修改</a>
-				<a href="{:url('perfume/perfumeDelete')}?perfumeID={$perfume.perfumeID}">删除</a>
+				<a href="{:url('perfume/perfumeupdate')}?perfumeID={$perfume.perfumeID} " style="color:Black;text-decoration:none">修改</a>
+				<a href="{:url('perfume/perfumeDelete')}?perfumeID={$perfume.perfumeID} " style="color:Black;text-decoration:none">删除</a>
 				</td>
 			</tr>
 			{/foreach}
