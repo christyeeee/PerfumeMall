@@ -2,36 +2,36 @@
 <center>
 <table width=999px border=0 >
 <tr>
-	<td rowspan=2 style="width:450px; height:68px"></td>
-	<td style="font-size:x-small; font-fmaily:华文行楷">尽情享受香氛之旅</td>
+	<td rowspan=2 style="width:420px; height:68px"></td>
+	<td style="font-size:x-big; font-family:宋体">尽情享受香氛之旅</td>
 	<td style="font-size:x-small;text-align:center;">
-		<a href="member.php" style="text-decoration:none;">我的帐户</a>|
-		<a href="{:url('order/showorder')}" style="text-decoration:none;">我的订单</a>|
-		<a href="{:url('cart/showcart')}" style="text-decoration:none;">购物车</a>|
+		<a href="member.php" >我的帐户</a>|
+		<a href="{:url('order/showorder')}" >我的订单</a>|
+		<a href="{:url('cart/showcart')}" >购物车</a>|
 	</td>
 </tr>
 <tr>
 	<td>
 	{if condition="$Think.session.email eq ''"}
-		<a href="{:url('login/login')}" style="font-size:x-small;text-decoration:none;">登录</a>&nbsp;&nbsp;
+		<a href="{:url('login/login')}" style="font-size:x-small">登录</a>&nbsp;&nbsp;
 	{else}
-		<a href="{:url('login/logOut')}" style="font-size:x-small;text-decoration:none;">退出</a>&nbsp;&nbsp;
+		<a href="{:url('login/logOut')}" style="font-size:x-small">退出</a>&nbsp;&nbsp;
 	{/if}
-		<a href="{:url('register/register')}" style="font-size:x-small;text-decoration:none;">注册</a>&nbsp;&nbsp;
-		<a href="{:url('admin/adminlogin/login')}" style="font-size:x-small;text-decoration:none;">后台登录</a>&nbsp;&nbsp;
+		<a href="{:url('register/register')}" style="font-size:x-small">注册</a>&nbsp;&nbsp;
+		<a href="{:url('admin/adminlogin/login')}" style="font-size:x-small">后台登录</a>&nbsp;&nbsp;
 	</td>
-	<td style="text-align:right;"></td>
+	<td style="text-align:center;"></td>
 </tr>
 <tr>
 	<td colspan=3 style="background-color:rgb(212,182,132); font-size: small;text-align:center; width:999px;height:40px">
  		<span style=" color:White;"> |</span> &nbsp; &nbsp; &nbsp;
     	<a href="{:url('index/index')}" style="text-decoration:none;">
-    		<span style=" color:White; font-weight:bold; font-size:medium; font-family:宋体"> 主页</span>
-    	</a>&nbsp;&nbsp;&nbsp; 
-    	<span style=" color:White;"> |</span> &nbsp;&nbsp;&nbsp;
+    		<span style=" color:White; font-weight:bold; font-size:medium; font-family:宋体">主页</span>
+    	</a>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+    	<span style=" color:White;"> |</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     	<a href="{:url('index/showperfume')}"  style=" text-decoration:none;">
-    		<span style=" color:White; font-weight:bold; font-size:medium; font-family:宋体">鲜花</span>
-    	</a>&nbsp; &nbsp; &nbsp; 
+    		<span style=" color:White; font-weight:bold; font-size:medium; font-family:宋体">香水</span>
+    	</a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
     	<span style=" color:White;"> |</span>&nbsp;&nbsp;&nbsp;
 	</td>
 </tr>
