@@ -15,10 +15,10 @@ class Register extends Controller{
             $this->error('email不能为空');
         }
         if (empty(input('post.passw1'))){
-            $this->error('passw1不能为空');
+            $this->error('password不能为空');
         }
         if (empty(input('post.passw2'))){
-            $this->error('passw2不能为空');
+            $this->error('重复passwword不能为空');
         }
         if (input('post.passw1')!=input('post.passw2')){
             $this->error('两次密码输入不一致！');
