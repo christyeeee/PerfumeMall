@@ -15,5 +15,9 @@ class Showperfume extends Controller
         $this->assign('shoplists',$shoplists);
         return $this->fetch('perfumedetail');
     }
+    
+    public function clsperfume(){
+        
+    }
 }
 
