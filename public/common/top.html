@@ -3,16 +3,19 @@
 <table width=999px border=0 >
 <tr>
 	<td rowspan=2 style="width:150px; height:68px">
-		<img src="__ROOT__/public/static/image/logo2.png" width="80" height="80" border="0">
+		<img src="__ROOT__/public/static/image/logo3.png" width="80" height="100" border="0">
 	</td>
-	<td style="font-size:30px; font-family:cursive; color:Black" align="center">Welcome to the Perfume Valley Tour!</td>
+	<td align="center">
+		<img src="__ROOT__/public/static/image/slogan.png" width="540" height="100" border="0">
+	</td>
+	
 	<td style="font-size:x-small;text-align:right;">
 		<a href="{:url('order/showorder')}" style="color:Black;text-decoration:none;font-family:cursive " >我的账单</a>&nbsp; &nbsp; &nbsp;
 		<a href="{:url('cart/showcart')}" style="color:Black;text-decoration:none;font-family:cursive">购物车</a>
 	</td>
 </tr>
 <tr >
-	<td  style="height:50px" align="center">
+	<td  style="height:30px" align="center">
 	{if condition="$Think.session.email eq ''"}
 		<a href="{:url('login/login')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">登录</a>&nbsp;&nbsp;
 	{else}
