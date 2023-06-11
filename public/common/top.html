@@ -7,33 +7,31 @@
 	</td>
 	<td style="font-size:30px; font-family:cursive; color:Black">Welcome to the Perfume Valley Tour!</td>
 	<td style="font-size:x-small;text-align:right;">
-		<a href="member.php" style="color:Black;text-decoration:none;font-family:cursive ">Account</a>&nbsp; &nbsp; &nbsp;
-		<a href="{:url('order/showorder')}" style="color:Black;text-decoration:none;font-family:cursive " >Order</a>&nbsp; &nbsp; &nbsp;
-		<a href="{:url('cart/showcart')}" style="color:Black;text-decoration:none;font-family:cursive">Cart</a>
+		<a href="member.php" style="color:Black;text-decoration:none;font-family:cursive ">我的账号</a>&nbsp; &nbsp; &nbsp;
+		<a href="{:url('order/showorder')}" style="color:Black;text-decoration:none;font-family:cursive " >我的账单</a>&nbsp; &nbsp; &nbsp;
+		<a href="{:url('cart/showcart')}" style="color:Black;text-decoration:none;font-family:cursive">购物车</a>
 	</td>
 </tr>
-<tr>
-	<td style="width:100px"></td>
-	<td  style="height:40px">
+<tr >
+	<td  style="height:50px" align="center">
 	{if condition="$Think.session.email eq ''"}
-		<a href="{:url('login/login')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">Login</a>&nbsp;&nbsp;
+		<a href="{:url('login/login')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">登录</a>&nbsp;&nbsp;
 	{else}
-		<a href="{:url('login/logOut')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">Exit</a>&nbsp;&nbsp;
+		<a href="{:url('login/logOut')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">退出</a>&nbsp;&nbsp;
 	{/if}
-		<a href="{:url('register/register')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">Register</a>&nbsp;&nbsp;
-		<a href="{:url('admin/adminlogin/login')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">BackLogin</a>&nbsp;&nbsp;
+		<a href="{:url('register/register')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">注册</a>&nbsp;&nbsp;
+		<a href="{:url('admin/adminlogin/login')}" style="font-size:x-medium;text-decoration:none;color:Black;font-family:cursive">后台登录</a>&nbsp;&nbsp;
 	</td>
-	<td style="text-align:center;"></td>
 </tr>
 <tr>
-	<td colspan=3 style="background-color:rgb(212,182,132); font-size: small;text-align:center; width:999px;height:40px">
+	<td colspan=3 align="center" style="background-color:rgb(212,182,132); font-size: small;text-align:center; width:999px;height:40px">
  		<span style=" color:White;"> |</span> &nbsp; &nbsp; &nbsp;
     	<a href="{:url('index/index')}" style="text-decoration:none;">
-    		<span style=" color:White; font-weight:bold; font-size:medium; font-family:cursive">Home</span>
+    		<span style=" color:White; font-weight:bold; font-size:medium; font-family:cursive">首页</span>
     	</a>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
     	<span style=" color:White;"> |</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     	<a href="{:url('index/showperfume')}"  style=" text-decoration:none;">
-    		<span style=" color:White; font-weight:bold; font-size:medium; font-family:cursive">Perfume</span>
+    		<span style=" color:White; font-weight:bold; font-size:medium; font-family:cursive">香水</span>
     	</a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
     	<span style=" color:White;"> |</span>&nbsp;&nbsp;&nbsp;
 	</td>
