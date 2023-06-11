@@ -73,6 +73,8 @@ $(function(){
 			var message=$("#message").val();
 			var buy_name=$(".buy-name").text();
 			var pay_with=$("input[name=pay-with]").val();
+			window.location.href="{:url('../../index/order/showorder')}";	
+			alert("提交成功^-^");
 			$.post("{:url('order/addOrder')}",{
 					custID:custID, 
 					total:total,
@@ -83,7 +85,8 @@ $(function(){
 					pay_with:pay_with
 				},function(data){
 					if(data=="success"){
-						window.location.href="{:url('order/showorder')}";	
+						window.location.href="{:url('../../index/order/showorder')}";	
+						alert("成功");
 					}				
 				});
 		});	
