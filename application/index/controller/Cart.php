@@ -60,5 +60,6 @@ class Cart extends Controller
         $num=input('get.num');
         db('cart')->where('cartID',$cartID)->setField('num',$num);
     }
+    
 }
 
