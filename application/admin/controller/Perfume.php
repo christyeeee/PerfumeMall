@@ -23,11 +23,11 @@ class Perfume extends Controller
     public function addperfume(Request $request){
         $perfumeID=$request->param('perfumeID');
         if(empty($perfumeID)){
-            $this->error('请填写鲜花编号');
+            $this->error('请填写香水编号');
         }
         $perfume1=perfumeModel::get($perfumeID);
         if(!empty($perfume1)){
-            $this->error('您填写鲜花编号已存在！');
+            $this->error('您填写香水编号已存在！');
         }
         $perfume=new perfumeModel();
         $perfume->perfumeID=$perfumeID;
