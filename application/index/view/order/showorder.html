@@ -6,11 +6,46 @@
 	<link href="__ROOT__/public/static/css/orderList.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="__ROOT__/public/static/js/jquery-1.4.2.js"></script>
 <style>
-/*分页样式*/  
+/*分页样式
 .pagination{text-align:center;margin-top:20px;margin-bottom: 20px;}  
 .pagination li{margin:0px 10px; padding: 3px 8px;display: inline-block;}  
 .pagination .active{background-color: #D4B684;color: #fff;}  
 .pagination .disabled{color:#aaa;} 
+*/  
+ .page {
+ 	width:999px;
+ 	height: 40px;
+ 	margin-left:30px;
+ 	background-color: #D4B684;
+ }           
+ .page ul {
+ 	list-style: none;               
+ 	margin-left: 350px;
+ }           
+ .page li {
+ 	display: block;
+ 	float: left;
+ }           
+ .page a {
+ 	line-height: 40px;
+ 	display: block;
+ 	color: #fff;
+ 	text-decoration: none;
+ 	padding: 0 20px;
+ }           
+ .page a:hover {
+ 	background-color: #D5A684;
+ }
+ .right{
+	margin-top:0px;
+ }
+.page .pagination .active{
+ 	background-color: #D5A684;
+ 	color: #fff;
+	line-height: 40px;
+	padding: 0 20px;
+}  
+.page .pagination .disabled{color:#aaa;}
 </style>
 <script>
 //文档就绪事件开始
@@ -39,7 +74,7 @@ $(function(){
  	{/if}
     </div>
     <!-- 分页显示记录-->
-<div class="pages">{$page}</div>
+<div class="page">{$page}</div>
 
 <!-- 模版数据 -start -->
  {foreach $showorder as $order}
