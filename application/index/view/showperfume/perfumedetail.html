@@ -29,14 +29,18 @@
      	<td><font size=2>{$perfume.shuoming}</font></td>
      </tr>
      <tr>
-     	<td colspan=2><div style='text-align:left;font-size: medium; color: #000066;'>
+     	<td colspan=2>
+     	<div style='text-align:left;font-size: medium; color: #000066;'>
      	<div style='text-decoration:line-through;margin-top:8px;'>原价:￥{$perfume.price}</div>
      	现价：<font size=4 color=red><b>￥{$perfume.yourprice}</b></font></div>
      	</td>
      </tr>
      <tr>
-     	<td colspan=2><a href='{:url('cart/addCart')}?perfumeID={$perfume.perfumeID}'>
-     	<img src='__ROOT__/public/static/image/ingwc_ico.jpg' border=0></a></td>
+     	<td colspan=2>
+     		<a href='{:url('cart/addCart')}?perfumeID={$perfume.perfumeID}'>
+     			<img src='__ROOT__/public/static/image/addCart.png' style="width:140px;height:60px">
+     		</a>
+     	</td>
      </tr>
      <tr><td colspan=3><img src="__ROOT__/public/static/picture/{$perfume.pictured}" border=0></td></tr>
      <tr><td colspan=3><img src="__ROOT__/public/static/picture/{$perfume.ylpicture}" border=0></td></tr>
