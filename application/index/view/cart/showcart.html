@@ -77,47 +77,46 @@ function chk(){
 		</tr> 
 		<tbody id="goods">
 
-{volist name="result" id="cart"}
-<tr style='text-align:center;height:50px;line-height:50px;'>
-<td><input type="checkbox" name="cartID[]"
-							value="{$cart.cartID}" checked onclick="chk()"></td>
-<td>{$cart.perfumeID}</td>
-
-<td><div style='height:50px; float:left;'>
-<img src='__ROOT__/public/static/picture/{$cart.pictures}' width=48 height=51 border=0></div>
-<div style='height:50px; float:left;'>{$cart.pname}</div>
-</td>
-
-<td>{$cart.price}</td>
-<td>{$cart.yourprice}</td>
-
-<td>
- 
- <input type="button" value="-" onclick="change(this, -1,{$cart.cartID});"/>
-            <input type="text" size="3" name = "num" readonly value="{$cart.num}"/>
-            <input type="button" value="+" onclick="change(this, 1,{$cart.cartID});"/>
-            
-</td>
-<td></td>
-<td>
-<input type="image" onclick="del(this,{$cart.cartID});" width="41" height="20"
-		src="__ROOT__/public/static/image/04shop_deleteID.gif">
-</td>
-</tr>
-{/volist}
-</tbody>
-				<tr>
-					<td colspan="6" align="right">总计:￥</td>
-					<td id="total" align="right"
-						style="color: red; font-size: 16px; font-bold: true;">$sum</td>
-					<td>元</td>
-				</tr>
- </table>
+		{volist name="result" id="cart"}
+		<tr style='text-align:center;height:50px;line-height:50px;'>
+			<td>
+				<input type="checkbox" name="cartID[]" value="{$cart.cartID}" checked onclick="chk()"></td>
+			<td>{$cart.perfumeID}</td>
+		
+			<td>
+				<div style='height:50px; float:left;'>
+					<img src='__ROOT__/public/static/picture/{$cart.pictures}' width=48 height=51 border=0>
+				</div>
+				<div style='height:50px; float:left;'>{$cart.pname}</div>
+			</td>
+			<td>{$cart.price}</td>
+			<td>{$cart.yourprice}</td>
+			<td>
+				<input type="button" value="-" onclick="change(this, -1,{$cart.cartID});"/>
+		        <input type="text" size="3" name = "num" readonly value="{$cart.num}"/>
+		        <input type="button" value="+" onclick="change(this, 1,{$cart.cartID});"/>      
+			</td>
+			<td>
+				<input type="image" onclick="del(this,{$cart.cartID});" width="41" height="20" src="__ROOT__/public/static/image/04shop_deleteID.gif">
+			</td>
+		</tr>
+		{/volist}
+		</tbody>
+			<tr>
+				<td colspan="6" align="right">总计:￥</td>
+				<td id="total" align="right" style="color: red; font-size: 16px; font-bold: true;">$sum</td>
+				<td>元</td>
+			</tr>
+ 	</table>
 </form>
 
 <div style="float:left;width:881;text-align:right;">
-<a href="{:url('index/index')}"><img src="__ROOT__/public/static/image/continue.png" border=0></a>&nbsp;
-<a href="{:url('cart/clearCart')}"><img src="__ROOT__/public/static/image/clearCart.png" border=0></a>&nbsp;
-<input type='image' src='__ROOT__/public/static/image/submitOrder.png' onclick='javascript:form1.submit()'>
-
+	<a href="{:url('index/index')}">
+		<img src="__ROOT__/public/static/image/continue.png" border=0>
+	</a>&nbsp;
+	<a href="{:url('cart/clearCart')}">
+		<img src="__ROOT__/public/static/image/clearCart.png" border=0>
+	</a>&nbsp;
+	<input type='image' src='__ROOT__/public/static/image/submitOrder.png' onclick='javascript:form1.submit()'>
+</div>
  </center>
