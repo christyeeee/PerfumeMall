@@ -9,13 +9,14 @@
 	<style type="text/css">
 		.box{
 				background-image: url(__ROOT__/public/static/image/background.png);
-            }
+				background-size: cover;            
+}
 	</style>
 </head>
 <body >
 <div class="box" >
 	{include  file="./public/common/top.html"/}
-<br><br>
+
 <center>
 <form action="{:url('/index/register/doRegister')}" method="post" n="f">
 	<table style="width:500px; border-width:3px; border-style:dotted;">
@@ -40,8 +41,10 @@
 			</td>
 		</tr>
 </table>
+<br><br><br><br><br><br><br><br><br><br><br>
 </form>
-{include file="./public/common/bottom.html"/}
+<tr style="text-align:center;">Copyright © 2023, PerfumeMall.com, All Rights Reserved 粤华师备 20132003040号 粤ICP备 123456号</tr>
+
 </center>
 </div>
 </body>
