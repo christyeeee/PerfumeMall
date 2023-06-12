@@ -1,21 +1,47 @@
-{include  file="./public/common/admintop.html"/}
+
+<!DOCTYPE html>
+<html>
 <meta charset="utf-8">
+<head>
+<style type="text/css">
+		.box{
+				background-image: url(__ROOT__/public/static/image/background.png);
+				background-repeat:repeat;
+            }
+	</style>
+</head>
+<body>
 <center>
 <br>
+<div class="box">
+{include  file="./public/common/admintop.html"/}
 <form action="{:url('adminlogin/doLogin')}" method="post" name=f>
 <table style="width:500px; border-width:3px; border-style:dotted;">
-<tr><td colspan=2 style="text-align:center;height:60px;">香谷之旅后台登录</td></tr>
 <tr>
- <td style="text-align:right;height:30px;">用户名：</td>
-<td align=left><input type=text name="username" value="admin"></td>
+	<td colspan=2 style="text-align:center;height:60px;">香谷之旅后台登录</td>
 </tr>
 <tr>
-<td style="text-align:right;height:60px;">密码：</td>
-<td align=left><input type="password" name="password" value="123"></td>
+ 	<td style="text-align:right;height:30px;">用户名：</td>
+	<td align=left><input type=text name="username" value="admin"></td>
 </tr>
-<tr><td colspan=2 style="text-align:center;height:60px;">
-<input type=submit name=s style="background-color:rgb(227,161,21);" value="登录">
-</td></tr>
+<tr>
+	<td style="text-align:right;height:60px;">密码：</td>
+	<td align=left>
+		<input type="password" name="password">
+	</td>
+</tr>
+<tr>
+	<td colspan=2 style="text-align:center;height:60px;">
+		<input type=submit name=s style="background-color:#D4B684;" value="登录">
+	</td>
+</tr>
 </table>
 </form>
+<div>
+<br><br>
+</div>
+</div>
+
 </center>
+</body>
+</html>
