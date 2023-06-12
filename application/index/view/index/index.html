@@ -32,8 +32,8 @@
 			<a href="__ROOT__/index.php/index/showperfume/perfumedetail.html?perfumeID={$perfume.perfumeID}">
 				<img src="__ROOT__/public/static/picture/{$perfume.picturem}" border="0"/>
 			</a>
-				<div id="prod_name_div">{$perfume.pname}</div>
-				<div id="prod_price_div">￥{$perfume.yourprice}元</div>
+				<div id="prod_name_div" style="font-size:15px">{$perfume.pname}</div>
+				<div id="prod_price_div" style="color:#BB2732">￥{$perfume.yourprice}元</div>
 				<div>
 					<div id="gotocart_div">
 					<a href="{:url('cart/addCart')}?perfumeID={$perfume.perfumeID}">加入购物车</a>
