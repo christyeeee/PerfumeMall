@@ -7,7 +7,7 @@ use think\console\input\Option;
 use app\admin\controller\Perfume;
 use function think\alert;
 class Index extends Controller
-{
+{ 
     public function index()
     {
         $pclass=Db::table('perfume')->distinct('true')->field('pclass')->select();
@@ -18,26 +18,23 @@ class Index extends Controller
         $minprice=input('post.minprice');
         $maxprice=input('post.maxprice');
         
-        $fcls1 = $_POST["pclass"];       
-       
         if (empty($maxprice)){
             $maxprice=PHP_INT_MAX;
         }        
         if (empty($minprice)){
             $minprice=0;
         }
-        
+                
         $searchstr="yourprice between $minprice and $maxprice";
         if (!empty($pname)){
             $searchstr.=" and pname like '%$pname%'";
         }
-        if (!empty($fcls1)){
+        
+        if($_POST){
+            $fcls1 = $_POST["pclass"];
             $searchstr.=" and pclass like '%$fcls1%'";
         }
-        
-                 
-        
-        
+                                
         $data=Db::table('perfume')->where($searchstr)->order('SelledNum desc')->select();
         $this->assign('perfumes',$data);
         return $this->fetch();
@@ -57,9 +54,7 @@ class Index extends Controller
 //     }
     
     public function showperfume(){      
-        $data = Db::table('perfume')
-        ->order('SelledNum','desc')
-        ->paginate(5);
+        $data = Db::table('perfume')->order('SelledNum','desc')->paginate(5);
         $this->assign('result',$data);
         $page=$data->render();
         $this->assign('page',$page);
