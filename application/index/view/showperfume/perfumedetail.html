@@ -19,36 +19,36 @@
      <tr>
         <td rowspan=7 width=200>
          <img src="__ROOT__/public/static/picture/{$perfume.pictureb}"></td>
-        <td colspan=2 align=center><div style='font-weight:bold;font-size:medium;height:40px;line-height:40px;color:#000066;text-align:center;border-width:1px;  border-style:solid;border-color:red;'>
+        <td colspan=2 align=center><div style='font-weight:bold;font-size:25;height:40px;line-height:40px;color:#000000;text-align:center;border-width:1px; border-style:solid;border-color:#D4B684;'>
            {$perfume.pname}</div></td>          	
      </tr>
      <tr >
-       <td width=50 ><font size=2>前调：</font></td>
+       <td width=80 style='font-weight:bold;text-align:center;'><font size=2>前调：</font></td>
        <td><font size=2>{$perfume.qiandiao}</font></td> 
      </tr>
      <tr>
-     	<td width=50><font size=2>中调：</font></td>
+     	<td width=80 style='font-weight:bold;text-align:center;'><font size=2><font size=2>中调：</font></td>
      	<td><font size=2>{$perfume.zhongdiao}</font></td>
      </tr>
     <tr>
-     	<td width=50><font size=2>后调：</font></td>
+     	<td width=80 style='font-weight:bold;text-align:center;'><font size=2><font size=2>后调：</font></td>
      	<td><font size=2>{$perfume.houdiao}</font></td>
      </tr>
      <tr>
-     	<td width=50 ><font size=2>简介：</font></td>
+     	<td width=80 style='font-weight:bold;text-align:center;'><font size=2><font size=2>简介：</font></td>
      	<td><font size=2>{$perfume.shuoming}</font></td>
      </tr>
      <tr>
      	<td colspan=2>
-     	<div style='text-align:left;font-size: medium; color: #000066;'>
-     	<div style='text-decoration:line-through;margin-top:8px;'>原价:￥{$perfume.price}</div>
-     	现价：<font size=4 color=red><b>￥{$perfume.yourprice}</b></font></div>
+     	<div style='margin-left:15px;text-align:left;font-size: medium; color: #000066;'>
+     	<div style='text-decoration:line-through;margin-top:8px;color:grey'>原价:￥{$perfume.price}</div>
+     	现价：<font size=4 color=brown><b>￥{$perfume.yourprice}</b></font></div>
      	</td>
      </tr>
      <tr>
      	<td colspan=2>
      		<a href='{:url('cart/addCart')}?perfumeID={$perfume.perfumeID}'>
-     			<img src='__ROOT__/public/static/image/addCart.png' style="width:140px;height:60px">
+     			<img src='__ROOT__/public/static/image/addCart.png' style="margin-left:10px;width:140px;height:60px">
      		</a>
      	</td>
      </tr>
@@ -70,6 +70,11 @@
 <tr><td style='font-size:30;text-align:center'>用户评价</td></tr>
 </table>
 <!--评价循环开始 -->
+{if condition="$shoplists eq ''"}
+<table style='width:999px;font-size:small;font-color:grey;border-width:1px;border-style:solid;align:center;height:120px;'>
+<tr><td><i>暂无用户评价</i></td></tr>
+</table>
+{else}
 {foreach $shoplists as $shoplist}
 <table style='width:999px;font-size:small;border-width:1px;border-style:solid;align:center;height:120px;'>
 <tr>
@@ -90,5 +95,6 @@
 <tr><td colspan=2>评价内容：{$shoplist.pjcontent}</tr>
 </table>
 {/foreach}
+{/if}
 <!--评价循环结束 -->
 </center>
